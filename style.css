@@ -1,0 +1,206 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: none;
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: transparent;
+    height: auto !important;
+    position: fixed;
+    z-index: 15;
+}
+.header-container{
+    display: flex;
+    width: 90%;
+    max-width: 1500px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.header-diferent{
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+.header-diferent .nav-list a{
+    color: black;
+}
+
+.header-logo{
+    width: 3.5rem;
+    margin-right: auto;
+    padding-left: 90px;
+}
+
+.nav-list{
+    display: flex;
+    gap: 30px;
+
+}
+.nav-list a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+
+}
+nav{
+    padding-right: 90px;
+}
+
+.section-main{
+    background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)), url(img/hero-bcg.jpeg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}
+h1{
+    color: white;
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+.center-section{
+    max-width:700px;
+}
+
+.section-main p {
+    color: white;
+    margin-top: 20px;
+
+}
+.menu-mobile{
+    display: none;
+}
+
+.bars{
+    width: 2.5rem;
+    height: 4px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+
+button{
+    padding: .85rem 60px;
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 400ms ease-in;
+}
+button:hover{
+    background-color: white;
+    color: hsl(209, 76%, 59%);
+}
+
+.section-about-us{
+    min-height: 70vh;
+    background-color: hsl(205, 100%, 96%);
+    width: 100%;
+}
+
+.section-services{
+    min-height: 70vh;
+    width: 100%;
+}
+.section-tour{
+    min-height: 70vh;
+    background-color: hsl(205, 100%, 96%);
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 800;
+}
+
+span{
+    color: hsla(182, 63%, 54%);
+}
+
+footer{
+    background-color: hsl(209, 61%, 16%);
+    min-height: 30vh;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 575px){
+    header{
+        background-color: white;
+    }
+    .nav-list{
+       
+    }
+   
+    .menu-mobile.open ~ nav .nav-list{
+        display: block; 
+        padding-top: 20px;
+        
+    }
+    .menu-mobile.menu-mobile ~ nav{
+        height: 0;
+        overflow: hidden;
+        transition: height 100ms;
+    }
+    .menu-mobile.menu-mobile.open ~ nav{
+        overflow: visible;
+    }
+    .menu-mobile.open ~ nav .nav-list a{
+        font-size: 1em;
+        color: black;
+        opacity: 1;
+
+    }
+    .menu-mobile ~ nav .nav-list a{
+        font-size: 1em;
+        opacity: 0;
+        color: transparent;
+        transition: opacity ease-in 800ms;
+    }
+    .menu-mobile.open ~ nav .nav-list li{
+        margin-bottom: 7px;
+
+    }
+
+    .header-container{
+        display: inline-block;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .header-logo{
+        padding:0;
+    }
+    .menu-mobile{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 19px;
+        cursor: pointer;
+
+    }
+   
+}
